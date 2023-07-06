@@ -26,9 +26,9 @@ def main():
 
 
 
-    unique_char_stat = marvelchars.get(char_name).get(char_stat) 
-
-    print(char_name + "'s " + char_stat + " is:" ,  unique_char_stat.title())
+    unique_char_stat = marvelchars.get(char_name).get(char_stat).title() 
+ 
+    print(f"{char_name}'s {char_stat} is: {unique_char_stat}")
 
 if __name__ == "__main__":
     main()
