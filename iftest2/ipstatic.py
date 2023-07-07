@@ -9,4 +9,3 @@ ipchk = "192.168.0.1"
 if ipchk:
     print("Looks like the IP addresses was set: " + ipchk)
 
-
