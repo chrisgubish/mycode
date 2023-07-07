@@ -2,32 +2,63 @@
 
 """Mini Project"""
 
+def main():
 
-user_input = input("Are you having chest pains? \n>")
+    round = 0
+    while True: 
+        round = round + 1
 
-if user_input == "Yes":
-   user_input2 = print(input("Do you need us to contact emergency personnel for you? \n>"))
+        welcome_message = input("Welcome to the Emergency Heart Attack Hotline. Would you like assistance? \n>")
 
-   if user_input2 == "Yes":
-        print("Thank you, we are contacting emergency personnel right now")
-   
-   if user_input2 == "No":
-        print("Thank you, we will not contact emergency personnel at this time however we are here to help")
+        if welcome_message == "Yes":
+            print("Please continue forward")
+ 
+
+            user_input = input("Are you having chest pains? \n>")
+
+            if user_input == "Yes":
+                print("Do you need us to contact emergency personnel for you?")
+                
+                user_input2 = input(">")
+                   
+                if user_input2 == "Yes":
+                    print("Thank you, we are contacting emergency personnel right now")
+                    break
+
+                elif user_input2 == "No":
+                    print("Thank you, we will not contact emergency personnel at this time however we are here to help")
+                    break
 
 
-elif user_input == "I don't know":
-   user_input3 = print(input("Are you having difficulty breathing? \n>"))
-    
-   if user_input == "I don't know" and user_input3 == "yes":
-             print("We can contact emergency personnel")
+            elif user_input == "I don't know":
+                print("Are you having difficulty breathing?")
+                
+                user_input3 = input(">")
+               
+                if user_input3 == "Yes":
+                    print("We can contact emergency personnel")
+                    break
 
-   if user_input == "I don't know" and user_input3 == "no":
-            print("Please seek medical help")
+                elif user_input3 == "No":
+                    print("Please seek medical help")
+                    break
 
-    
 
-elif user_input == "No":
-    print("Thank you for your response.")
+            elif user_input == "No":
+                print("Thank you for your response.")
+                break
 
-else: 
-    print("You did not provide input.")
+            else:
+                print("You did not provide input.")
+
+
+        elif welcome_message =="No":
+            print("Thank you have a nice day!")
+            break
+           
+        else:
+            print("You did not provide input")
+
+if __name__ == "__main__":
+    main()
+
