@@ -6,7 +6,7 @@
 vendors = ["cisco", "juniper", "big_ip", "f5", "arista", "alta3", "zach", "stuart"]
 
 # create a second list of strings
-approved_vendors = ["cisco", "juniper", "big-ip"]
+approved_vendors = ["cisco", "juniper", "big_ip"]
 
 #loop across the list called vendors
 for x in vendors:
