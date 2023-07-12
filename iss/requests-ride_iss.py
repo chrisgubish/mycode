@@ -1,17 +1,17 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """tracking the iss using
-    api.open-notify.org/astros.json | Alta3 Research"""
+   api.open-notify.org/astros.json | Alta3 Research"""
 
 # notice we no longer need to import urllib.request or json
 import requests
 
 ## Define URL
-MAJORTOM = "http://api.open-notify.org/astros.jso"
+MAJORTOM = 'http://api.open-notify.org/astros.json'
 
 def main():
     """runtime code"""
 
-    ## Call the webservice 
+    ## Call the webservice
     groundctrl = requests.get(MAJORTOM)
     # send a post with requests.post()
     # send a put with requests.put()
@@ -26,8 +26,8 @@ def main():
     print("\n\nConverted Python data")
     print(helmetson)
 
-    print("\n\nPeople in Space: ", helmetson["number"])
-    people=helmetson["people"]
+    print('\n\nPeople in Space: ', helmetson['number'])
+    people = helmetson['people']
     print(people)
 
 if __name__ == "__main__":
