@@ -2,12 +2,17 @@
 
 """Mini Project"""
 
+
+from tkinter import *
+from tkinter import ttk
+
 def main():
 
     round = 0
     while True:  
 
-        welcome_message = input("Welcome to the Emergency Heart Attack Hotline. Would you like assistance? \n>")
+        user_name = input("Hello, what is your name?")
+        welcome_message = input(f"Hello {user_name}, welcome to the Emergency Heart Attack Hotline. Would you like assistance? \n>")
 
         if welcome_message.lower() == "yes":
             print("Please continue forward")
@@ -58,6 +63,10 @@ def main():
         else:
             print("You did not provide input")
 
+
+
+
+## maybe create a list of medical providers/doctors and pull information from that list based on the location-zipcode the user enters 
 if __name__ == "__main__":
     main()
 
