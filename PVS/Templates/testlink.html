@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href={{  url_for('static', filename='css/finalproject.css') }} />
+<title>Calculate Your Total Daily Energy Expenditure</title>
+<h1>Enter the requested information below to calculate your Total Daily Energy Expenditure</h1>
+</head>
+<body>
+    <form action="{{ url_for('calculate_results') }}" method="POST"></form>
+<fieldset>
+<form method="post">
+<label for="height">Enter your height (in inches)<input id='height' name='height' type='number' required /></label>
+<label for="weight">Enter your weight (in lbs)<input id='weight' name='weight' type='number' required /></label>
+<label for="age">Enter your age<input id='age' name='age' type='text' required /></label>
+<fieldset>
+<label for="sex">Enter your sex</label>
+<label for="male"><input id="male" type="radio" name="sex" class="inline" value="male"/> Male</label>
+<label for="female"><input id="female" type="radio" name="sex" class="inline" value="female"/> Female</label>
+<label for="activity_level">How active are you throughout the day?</label>
+<select id="activity_level" name="activity_level">
+    <option value="">(select one)</option>
+    <option value="sedentary">Sedentary (little or no exercise, desk job)</option>
+    <option value="lightly active">Lightly active (light exercise 1-3 days/week)</option>
+    <option value="active">Active (moderate exercise 6-7 days/week)</option>
+    <option value="very active">Very active (intense exercise or exercising 2x day)</option>
+    <option value="extremely active">Extremely active (hard exercise 2x day/ training for professional level event/Let's be real....)</option>
+</select>
+</label>
+<input type='submit' value='Calculate'/>
+</form>
+</fieldset>
+</body>
+</html>
